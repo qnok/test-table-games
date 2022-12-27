@@ -137,6 +137,7 @@ function checkMove(game, player) {
     if (skipTurn[game[player]]) {
         game[anotherPlayer] += getDice();
         game = checkMove(game, anotherPlayer);
+        game.turn++;
     }
 
     if (instaDeath[game[player]]) {
